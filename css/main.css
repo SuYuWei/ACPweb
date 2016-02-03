@@ -1,0 +1,882 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/* ==========================================================================
+Global Styles
+========================================================================== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #0d0d0d;
+  overflow-x: hidden;
+}
+.sep {
+  max-width: 80px;
+  border: 2px solid #0d0d0d;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.light-sep {
+  max-width: 80px;
+  border: 2px solid #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+Typography
+========================================================================== */
+h1 {
+  font-size: 72px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+}
+
+h2 {
+  font-size: 36px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-family: 'Source-Sans-Pro-700',sans-serif;
+}
+
+h3 {
+  font-size: 26px;
+  color: #000;
+  font-family: 'Source-Sans-Pro-300',sans-serif;
+}
+
+h4 {
+  font-size: 24px;
+  color: #000;
+  font-family: 'Source-Sans-Pro-300',sans-serif;
+}
+
+h5 {
+  font-size: 22px;
+  color: #000;
+  font-family: 'Source-Sans-Pro-300',sans-serif;
+}
+
+h6 {
+  font-size: 18px;
+  color: #000;
+  font-family: 'Source-Sans-Pro-300',sans-serif;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-size: 18px;
+  color: #000;
+  font-family: 'Source-Sans-Pro-300',sans-serif;
+}
+
+/* ==========================================================================
+Buttons Styles
+========================================================================== */
+.btn{
+  margin:20px 0px;
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 3px solid #fff;
+  padding: 15px 30px;
+  font-size: 14px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent:active {
+  background: #fff;
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
+.btn-light {
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 15px 30px;
+  font-size: 14px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #0d0d0d;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-block {
+  background: #24242a;
+  padding: 15px 0;
+  font-size: 16px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 3px solid #24242a;
+}
+
+.btn-block:hover,
+.btn-block:focus,
+.btn-block:active {
+  background: #fff;
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+Preloader Style
+========================================================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background: #24242a;
+}
+.preloader i {
+  color: #fff;
+  position: absolute;
+  font-size: 36px;
+  line-height: 36px;
+  top: 50%;
+  left: 50%;
+  height: 36px;
+  width: 36px;
+  margin-top: -15px;
+  margin-left: -15px;
+  display: inline-block;
+}
+
+/* ==========================================================================
+Navigation Style
+========================================================================== */
+.navbar-default {
+  background: rgba(61,61,61,0.70);
+  margin-bottom: 0;
+  border: none;
+}
+.navbar-default .navbar-header {
+  width: 28%;
+  padding-right: 15px;
+}
+.navbar-default .nav-wrap {
+  width: 50%;
+}
+.navbar-default .nav > li > a {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  padding: 35px 15px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus,
+.navbar-default .nav > li > a:active {
+  color: #F38033;
+}
+.navbar-default .social-media {
+  float: right;
+  padding: 0 15px;
+}
+.navbar-default .social-media i {
+  font-size: 22px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background: transparent;
+  color: #F38033;
+}
+.top-nav-collapse {
+  background: #3E3D3D;
+}
+.top-nav-collapse .navbar-brand {
+  height: auto;
+}
+.top-nav-collapse .navbar-brand img {
+  width: 220;
+  height: 220;
+}
+.top-nav-collapse .nav > li > a {
+  padding: 30px 15px;
+}
+
+/* ==========================================================================
+Sliders Style
+========================================================================== */
+#owl-hero {
+  overflow: hidden;
+}
+#owl-hero .item {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#owl-hero .item .caption {
+  position: absolute;
+  top: 50%;
+  margin-top: -104px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 15;
+}
+#owl-hero .item .caption h1 {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+#owl-hero .item .caption h1 span {
+  font-weight: 700;
+}
+#owl-hero .item .caption h6 {
+  color: #fff;
+  margin: 0;
+  font-size: 36px;
+}
+#owl-hero .owl-pagination {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 100%;
+  bottom: 10%;
+}
+#owl-hero .owl-pagination .owl-page.active span {
+  background: #fff;
+}
+#owl-hero .owl-pagination .owl-page span {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#owl-hero .owl-buttons div {
+  background: #fff;
+  font-size: 24px;
+  color: #a3a3a3;
+  opacity: 1;
+}
+#owl-hero .owl-buttons .owl-prev {
+  left: -60px;
+}
+#owl-hero .owl-buttons .owl-next {
+  right: -60px;
+}
+#owl-hero .owl-buttons .owl-prev,
+#owl-hero .owl-buttons .owl-next {
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  height: 51px;
+  width: 51px;
+  line-height: 45px;
+  border-radius: 0;
+  border: 1px solid #fff;
+  z-index: 20;
+  text-align: center;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#owl-hero:hover .owl-prev {
+  left: -5px;
+}
+
+#owl-hero:hover .owl-next {
+  right: -5px;
+}
+
+/* ==========================================================================
+Welcome Style
+========================================================================== */
+#welcome {
+  padding: 60px 0;
+  text-align: center;
+}
+#welcome h2 {
+  text-transform: uppercase;
+}
+#welcome p {
+  padding: 20px 110px;
+}
+#welcome h2 span {
+  font-weight: 700;
+  color: #F38033;
+}
+#welcome img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+Services Style
+========================================================================== */
+#services {
+  background-image: url(../img/testimonials/plane.jpg);
+  background-size: cover;
+  padding: 60px 0;
+  text-align: center;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+#services h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#services .serheadingh {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 50px 0px;
+}
+#services .serheadingh4{
+  text-transform: uppercase;
+  color: #fff;
+  margin: 30px 0px;
+}
+
+#services p {
+  color: #fff;
+}
+
+#services .col-md-4 {
+  margin-bottom: 20px;
+}
+
+#services .col-md-4 img {
+  margin-bottom: 5px;
+}
+
+
+/* ==========================================================================
+Work Process Style
+========================================================================== */
+#work-process {
+  padding: 60px 0;
+  text-align: center;
+}
+#work-process .col-lg-3 {
+  margin-top: 40px;
+}
+#work-process h2 {
+  text-transform: uppercase;
+  color: #FF7E00;
+}
+#work-process h4 {
+  text-transform: uppercase;
+  color: #0d0d0d;
+  font-size: 16px;
+}
+#work-process span {
+  font-size: 48px;
+  color: #0d0d0d;
+  margin-bottom: 15px;
+}
+#work-process .embed-responsive-item{
+  width:400px;
+  height:300px;
+}
+
+/* ==========================================================================
+Testimonials Style
+========================================================================== */
+#testimonials {
+  background-image: url("../img/testimonials/plane.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 0;
+  text-align: center;
+}
+#testimonials h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+#testimonials p {
+  color: #fff;
+}
+#testimonials .item .quote {
+  margin: 20px auto;
+  width: 80%;
+}
+#testimonials .item .quote .right {
+  margin-left: 40px;
+  font-size: 32px;
+  color: #fff;
+}
+#testimonials .item .quote .left {
+  float: left;
+  margin-right: 40px;
+  color: #fff;
+}
+#testimonials .item h4 {
+  color: #fff;
+  line-height: 36px;
+  font-weight: 600;
+}
+#testimonials .item h5 span {
+  font-weight: 700;
+  text-transform: uppercase;
+} 
+
+#testimonials .owl-pagination .owl-page.active span {
+  background-color: #fff;
+}
+#testimonials .owl-pagination .owl-page span {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+Portfolio Style
+========================================================================== */
+#portfolio {
+  padding: 60px 0;
+  text-align: center;
+}
+#portfolio h2 {
+  text-transform: uppercase;
+}
+#portfolio h4 {
+  text-align: left;
+  font-weight: 600;
+}
+#portfolio p {
+  text-align: left;
+}
+#portfolio .btn {
+  float: left;
+  background-color: #F38033;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#portfolio .btn:hover,
+#portfolio .btn:focus,
+#portfolio .btn:active{
+  border: 2px solid #F38033;
+  background-color: #fff;
+  color: #000;
+}
+
+#portfolio .portfolio-box {
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  max-width: 650px;
+  height: 384px;
+}
+#portfolio .portfolio-box .portfolio-box-caption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  background: rgba(13, 13, 13, 0.6);
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#portfolio .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+#portfolio .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+#portfolio .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  padding: 0 15px;
+}
+#portfolio .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+}
+#portfolio .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+#portfolio .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+/* ==========================================================================
+Contact Us Style
+========================================================================== */
+#contact {
+  padding: 60px 0;
+  text-align: center; 
+  background-image: url(../img/contact/contact.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+}
+#contact h2 {
+  text-transform: uppercase;
+  color:#fff;
+}
+
+#contact p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+#contact form {
+  margin: 40px 0;
+}
+#contact .form-group {
+  margin-bottom: 35px;
+}
+#contact .form-control {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 2px solid #24242a;
+  color: #0d0d0d;
+  min-height: 45px;
+}
+#contact textarea {
+  height: 205px;
+  resize: none;
+}
+
+/* ==========================================================================
+Google Map Style
+========================================================================== */
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+/* ==========================================================================
+Footer Map Style
+========================================================================== */
+footer {
+  background: #3E3D3D;
+  padding: 20px 0;
+  text-align: center;
+  clear:both;
+  margin-top: -5px;
+}
+footer h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+footer h6 {
+  text-transform: uppercase;
+  color: #fff;
+}  
+footer .social a{
+  color: #fff;
+  margin: 5px 10px;
+}
+footer .social a:hover{
+  color: #F38033;
+} 
+/* ==========================================================================
+Products.html 
+========================================================================== */
+#wtwedo {
+  padding: 100px 0;
+  text-align: center;
+}
+#wtwedo h2 {
+  text-transform: uppercase;
+}
+#wtwedo img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#wtwedo h3 {
+  font-size: 30px;
+}
+#wtwedo h4 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#wtwedo p {
+  text-align: left;
+}
+/* ==========================================================================
+2015parisairshow.html 
+========================================================================== */
+#parisairshow {
+  padding: 100px 0;
+  text-align: center;
+}
+#parisairshow h2 {
+  text-transform: uppercase;
+}
+#parisairshow img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* ==========================================================================
+press.html 
+========================================================================== */
+#press {
+  padding: 100px 0;
+  text-align: center;
+}
+#press h2 {
+  text-transform: uppercase;
+}
+
+#press .col-lg-3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#press .col-lg-3 img{
+  height:245px;
+}
+
+#press .col-lg-3 video{
+  display:block;
+  background-color: white;
+  max-width: 100%;
+  height:245px;
+}
+
+#press .col-lg-3 a{
+  outline: none;
+}
+
+/* ==========================================================================
+markets.html 
+========================================================================== */
+#markets {
+  padding: 100px 0;
+  text-align: center;
+}
+#markets h2 {
+  text-transform: uppercase;
+}
+#markets h5 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+#markets img {
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+HongkongAirlines.html 
+========================================================================== */
+#hongkongAirlines {
+  padding: 100px 0;
+  text-align: center;
+}
+#hongkongAirlines h2 {
+  text-transform: uppercase;
+}
+#hongkongAirlines img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#hongkongAirlines .hongkongp{
+  padding: 10px 30px;
+  text-align: left;
+}
+#hongkongAirlines .leftp{
+  padding: 0px 30px;
+  text-align: left;
+}
+
+    /* ==========================================================================
+Media Queries Style
+========================================================================== */
+@media (max-width: 992px) {
+  /*-- Navigation --*/
+  .navbar-default {
+    background: #3E3D3D;
+  }
+  .navbar-default .navbar-header {
+    width: 100%;
+    padding-right: 0;
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    height: auto;
+  }
+  .navbar-default .navbar-header .navbar-brand img {
+    
+  }
+  .navbar-default .nav-wrap {
+    width: 100%;
+  }
+  .navbar-default .navbar-toggle {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: none;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #FF7E00;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:active {
+    background: none;
+  }
+  
+  .navbar-default .navbar-left,
+  .navbar-default .navbar-right {
+    float: none !important;
+  }
+  .navbar-default .navbar-toggle {
+    display: block;
+  }
+  .navbar-default .navbar-collapse {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-default .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-default .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  .navbar-default .navbar-nav > li {
+    float: none;
+  }
+  .navbar-default .collapse.in {
+    display: block !important;
+  }
+
+  /*-- Sliders --*/
+  #owl-hero h1 {
+    font-size: 30px;
+  }
+  #owl-hero .item .caption h6 {
+    font-size: 22px;
+  }
+  #owl-hero .btn {
+    margin-top: 15px;
+  }
+  #owl-hero .owl-buttons {
+    display: none;
+  }
+
+  /*-- section styles --*/
+  section h2 {
+    font-size: 32px;
+  }
+
+  #testimonials h5 {
+    font-size: 18px;
+  }
+
+  #welcome p {
+    padding: 10px 0px;
+  }
+  /*-- work-process video --*/
+  #work-process .embed-responsive-item{
+    width:300px;
+    height:150px;
+  }
+  /*-- portfolio img --*/
+  #portfolio .portfolio-box {
+    height: auto;
+  }
+  #portfolio .row{
+    margin-right : 0px;
+    margin-left : 0px;
+  }
+    
+  #hongkongAirlines .hongkongp{
+  padding: 10px 0px;
+  }
+  #hongkongAirlines .leftp{
+    padding: 0px 0px;
+  }
+
+  }
+
+
+/*@media screen and (min-width: 1200px) {
+    // 如果使用者之視窗寬度 >= 1200px，將會再載入這裡的 CSS。
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    // 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。    
+}
+
+@media screen and (max-width: 767px) {
+    // 如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。    
+}
+
+@media screen and (max-device-width: 480px) {
+    // 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 
+}*/

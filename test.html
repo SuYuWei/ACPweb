@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		#video-controls{
+			background-color: #000;
+			height: 80px;
+			width: 640px;
+		}
+		#play-pause{
+			height: 50px;
+			width: 50px;
+		}
+		#mute{
+			height: 50px;
+			width: 50px;
+		}
+		#seek-bar{
+			width: 300px;
+		}
+		#volume-bar{
+			width: 100px;
+		}
+		#full-screen{
+			height: 50px;
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="video-container">
+		  <!-- Video -->
+		  <video id="video" width="640" height="365" poster="img/video/video_cover.jpg">
+                    <source src="video/newsvideo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+          </video>
+		  <!-- Video Controls -->
+		  <div id="video-controls">
+		    <button type="button" id="play-pause">Play</button>
+		    <input type="range" id="seek-bar" value="0">
+		    <button type="button" id="mute">Mute</button>
+		    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+		    <button type="button" id="full-screen">Full-Screen</button>
+		  </div>
+	</div>
+	<script>
+		window.onload = function() {
+
+  				// Video
+				  var video = document.getElementById("video");
+
+				  // Buttons
+				  var playButton = document.getElementById("play-pause");
+				  var muteButton = document.getElementById("mute");
+				  var fullScreenButton = document.getElementById("full-screen");
+				  // Sliders
+				  var seekBar = document.getElementById("seek-bar");
+				  var volumeBar = document.getElementById("volume-bar");
+
+				  playButton.addEventListener("click", function() {
+				  if (video.paused == true) {
+				    // Play the video
+				    video.play();
+				    // Update the button text to 'Pause'
+				    playButton.innerHTML = "Pause";
+				  } else {
+				    // Pause the video
+				    video.pause();
+				    // Update the button text to 'Play'
+				    playButton.innerHTML = "Play";
+				  }
+				});
+
+				  muteButton.addEventListener("click", function() {
+					  if (video.muted == false) {
+					    // Mute the video
+					    video.muted = true;
+
+					    // Update the button text
+					    muteButton.innerHTML = "Unmute";
+					  } else {
+					    // Unmute the video
+					    video.muted = false;
+
+					    // Update the button text
+					    muteButton.innerHTML = "Mute";
+					  }
+					});
+
+				  fullScreenButton.addEventListener("click", function() {
+					  if (video.requestFullscreen) {
+					    video.requestFullscreen();
+					  } else if (video.mozRequestFullScreen) {
+					    video.mozRequestFullScreen(); // Firefox
+					  } else if (video.webkitRequestFullscreen) {
+					    video.webkitRequestFullscreen(); // Chrome and Safari
+					  }
+					});
+
+				  // Event listener for the seek bar
+						seekBar.addEventListener("change", function() {
+						  // Calculate the new time
+						  var time = video.duration * (seekBar.value / 100);
+
+						  // Update the video time
+						  video.currentTime = time;
+						});
+						// Update the seek bar as the video plays
+						video.addEventListener("timeupdate", function() {
+						  // Calculate the slider value
+						  var value = (100 / video.duration) * video.currentTime;
+
+						  // Update the slider value
+						  seekBar.value = value;
+						});
+						// Pause the video when the slider handle is being dragged
+						seekBar.addEventListener("mousedown", function() {
+						  video.pause();
+						});
+
+						// Play the video when the slider handle is dropped
+						seekBar.addEventListener("mouseup", function() {
+						  video.play();
+						});
+
+						volumeBar.addEventListener("change", function() {
+						  // Update the video volume
+						  video.volume = volumeBar.value;
+						});
+			}
+	</script>
+</body>
+</html>
